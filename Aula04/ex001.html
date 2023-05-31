@@ -13,22 +13,32 @@
             color: white;
             font: normal 20pt arial;
             /* cor e tamanho das letras */
+
         }
         h1{
             color: rgb(245, 245, 24);
         }
+
+        #corpo{
+            margin: 0 auto;
+            width: 500px;
+            background-color: red;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Aulas no Canal: <a href="https://www.youtube.com/@CursoemVideo">Curso em Video</a></p>
-    <div id="playlist"></div>
-
+    <div id="corpo">
+        <h1>Olá, mundo!</h1>
+        p>Aulas no Canal: <a href="https://www.youtube.com/@CursoemVideo">Curso em Video</a></p>
+        <div id="playlist"></div>
+    </div>
+    
     <script>
         var escreve = document.getElementById('playlist')
         var url =  'https://www.youtube.com/playlist?list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm'
         var link = 'Clicando Aqui!'.link(url)
-        escreve.innerHTML = 'Acesse a Playlist : ' + link
+        escreve.innerHTML = `Acesse a Playlist: ${link}`
     </script>
 </body>
 </html>
