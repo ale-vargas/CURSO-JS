@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<style>
+    input#txtvenl {
+        width: 100px;
+    }
+
+    div#corpo {
+        background-color: rgb(185, 105, 105);
+        width: 500px;
+        height: 155px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h1{
+        color:black;
+        -webkit-text-stroke: 0.1px white;           
+    }
+</style>
+
+<body>
+    <div id = "corpo">
+        <h1>Nacionalidade</h1>
+        Qual o seu país? <input type="text" name="txtn" id="txtn">
+        <p><input type="button" value="Verificar" onclick="verifica()"></p>
+        <div id = res>
+        </div>
+    </div>
+
+    <script>
+        function verifica(){
+            var selectn = document.querySelector('input#txtn')
+            var res = document.querySelector('div#res')
+            var país = String(selectn.value)
+            res.innerHTML = `Vivendo no país ${país}.`
+            if (país == 'Brasil'){
+                res.innerHTML += ` Você é Brasileiro.`
+            } else {
+                res.innerHTML += ` Você é estrangeiro.`
+            }
+        }
+    </script>
+</body>
+</html>
